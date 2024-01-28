@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #535cc8; /* Set your background color */
+      }
+
+      form {
+        width: 600px;
+        padding: 20px;
+        position: relative; /* Make the form a positioned container */
+      }
+
+      .input-line {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 100px;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+
+      .input-box {
+        border: 2px solid #f5781a; /* Set the border color for the input box */
+        border-radius: 5px;
+        background-color: #f5781a;
+      }
+
+      .input-group label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .input-group input {
+        padding: 8px;
+        box-sizing: border-box;
+        margin: 10px;
+      }
+
+      button {
+        background-color: #f5781a; /* Set the background color for the button */
+        color: #fff;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .signup-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post" action="{{ self_path }}">
+      {% csrf_token %}
+      <div class="input-line">
+        <div class="input-group">
+          <div class="input-box">{{form.first_name}}</div>
+        </div>
+        <div class="input-group">
+          <div class="input-box">{{form.last_name}}</div>
+        </div>
+      </div>
+      <div class="input-line" style="margin-top: 5px">
+        <div class="input-group">
+          <div class="input-box">{{form.username}}</div>
+        </div>
+        <div class="input-group">
+          <div class="input-box">{{form.password}}</div>
+        </div>
+      </div>
+      <button type="submit" style="margin-left: 75%">Sign Up</button>
+    </form>
+  </body>
+</html>
