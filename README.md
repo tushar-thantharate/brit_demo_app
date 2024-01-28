@@ -11,7 +11,7 @@ Ensure that you have the following software installed on your machine:
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-project.git
+   git clone https://github.com/tushar-thantharate/brit_demo_app
    cd brit_demo_app
 
 
